@@ -2,7 +2,7 @@
 
 ## LLM and RAG 
 
-This is a practice try-outsaimed at deepening understanding of Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG). The project leverages OpenAI APIs and contains two Jupyter notebooks that demonstrate basic LLM functionality and an introduction to RAG.
+This is a practice try-outs aimed at deepening understanding of Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG). The project leverages OpenAI APIs and contains two Jupyter notebooks that demonstrate basic LLM functionality and an introduction to RAG.
 
 ---
 
@@ -15,6 +15,9 @@ This is a practice try-outsaimed at deepening understanding of Large Language Mo
      - Converting articles into chunks.
      - Embedding these chunks using OpenAI embeddings.
      - Performing basic inference to answer questions based on the embedded data.
+   - `langchain_application.ipynb`: Explores LangChain's PromptTemplates and SummarizationChain for building prompt-based workflows and summarization tasks.
+   - `news_article_summarizer_langchain.ipynb`: Implements a news article summarizer using LangChain's summarization capabilities.
+   - `llama_index_overview.ipynb`: Provides an overview of LlamaIndex, utilizing the `WikipediaReader` for data ingestion and retrieval.
 
 2. **Requirements**
    - Python 3.8+
