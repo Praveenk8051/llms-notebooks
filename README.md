@@ -1,78 +1,99 @@
-# README
+# LLM Tutorials and Learning Projects
 
-## LLM and RAG 
-
-This is a practice try-outs aimed at deepening understanding of Large Language Models (LLMs) and Retrieval-Augmented Generation (RAG). The project leverages OpenAI APIs and contains two Jupyter notebooks that demonstrate basic LLM functionality and an introduction to RAG.
+This repository contains tutorials and learning projects to experiment with concepts in Large Language Models (LLMs). All projects are implemented in Jupyter Notebooks.
 
 ---
 
-## Contents
+## Tutorials and Projects
 
-1. **Notebooks**
-   - `introduction_to_llms.ipynb`: A simple introductory notebook to explore OpenAI API capabilities. It includes basic examples such as translating text, serving as a "hello-world" for working with LLMs.
-   - `basic_rag_pipeline.ipynb`: Demonstrates the foundational steps of RAG:
-     - Loading mini/LLaMA articles.
-     - Converting articles into chunks.
-     - Embedding these chunks using OpenAI embeddings.
-     - Performing basic inference to answer questions based on the embedded data.
-   - `langchain_application.ipynb`: Explores LangChain's PromptTemplates and SummarizationChain for building prompt-based workflows and summarization tasks.
-   - `news_article_summarizer_langchain.ipynb`: Implements a news article summarizer using LangChain's summarization capabilities.
-   - `llama_index_overview.ipynb`: Provides an overview of LlamaIndex, utilizing the `WikipediaReader` for data ingestion and retrieval.
+### 1. **Introduction to LLMs**
+Notebook: `introduction_to_llms.ipynb`
 
-2. **Requirements**
-   - Python 3.8+
-   - OpenAI Python SDK
-   - Jupyter Notebook
+- **Objective**: Learn how to use the ChatGPT API through practice tasks.
+- **Tasks**:
+  - **Simple Translation**: A basic translation task.
+  - **Controlling Outputs from Few-Shot Learning**: Experiment with guiding LLM outputs using few-shot examples.
 
 ---
 
-## Setup
+### 2. **Basic RAG Pipeline**
+Notebook: `basic_rag_pipeline.ipynb`
 
-1. Clone the repository:
+- **Objective**: Build a simple Retrieval-Augmented Generation (RAG) pipeline.
+- **Steps**:
+  - Downloaded an article and performed text chunking.
+  - Converted text into embeddings using OpenAI.
+  - Retrieved embeddings using cosine similarity stored in a DataFrame.
+  - Performed inference using:
+    - Google GenAI (`gemini-1.5-flash`)
+    - OpenAI (`gpt-3.5-turbo`)
+
+---
+
+### 3. **LangChain Application**
+Notebook: `langchain_application.ipynb`
+
+- **Objective**: Explore simple LangChain applications.
+- **Tasks**:
+  - "Hello World" level inferencing using HumanMessage Prompt templating with OpenAI (`gpt-3.5-turbo`).
+  - Summarization of a PDF document using `PyPDFLoader`.
+
+---
+
+### 4. **News Article Summarizer**
+Notebook: `news_article_summarizer_langchain.ipynb`
+
+- **Objective**: Summarize news articles using LangChain.
+- **Steps**:
+  - Scraped news articles.
+  - Used HumanMessage prompt templating from LangChain.
+  - Generated bullet-point summaries with proper prompts.
+
+---
+
+### 5. **Llama Index Overview**
+Notebook: `llama_index_overview.ipynb`
+
+- **Objective**: Understand and utilize LlamaIndex.
+- **Steps**:
+  - Used `download_loader` for `WikipediaReader`.
+  - Loaded and analyzed data with NLP and AI tools.
+
+---
+
+### 6. **Customer Support QA Chatbot**
+Notebook: `customer_support_qa_chatbot.ipynb`
+
+- **Objective**: Build a chatbot for customer support.
+- **Steps**:
+  - Downloaded articles using `SeleniumURLLoader`.
+  - Stored data in a vector storage database using FAISS.
+  - Queried the vector datastore and formatted output with `PromptTemplate`.
+
+---
+
+### 7. **YouTube Video Summarizer**
+Notebook: `youtube_video_summarizer.ipynb`
+
+- **Objective**: Summarize YouTube videos using Whisper and LangChain.
+- **Steps**:
+  - Downloaded and transcribed YouTube videos using Whisper.
+  - Summarized content using `SummarizationChain`.
+  - Split content into chunks, converted to embeddings, and stored in a vector database.
+  - Prepared prompts and queried the database.
+  - Generated summaries using `RetrievalQA`.
+
+---
+
+## How to Use
+1. Clone this repository:
    ```bash
-   git clone https://github.com/your-repo/llm-rag-hobby-project.git
-   cd llms-notebooks
+   git clone <repository_url>
+   cd <repository_name>
    ```
-
-
-2. Set up your OpenAI API key:
-   - Obtain an API key from the [OpenAI Dashboard](https://platform.openai.com/).
-   - Create a `.env` file and add your API key:
-     ```env
-     OPENAI_API_KEY=your_api_key_here
-     ```
-
-3. Explore the Jupyter notebooks:
+2. Open the notebooks with Jupyter:
    ```bash
    jupyter notebook
    ```
 
 ---
-
-## Usage
-
-### `introductions_to_llm.ipynb`
-- This notebook demonstrates a basic translation example using OpenAI's API.
-- Modify the prompt or language pairs to experiment further.
-
-### `basic_rag_pipeline.ipynb`
-- Step-by-step demonstration of RAG:
-  1. Load LLaMA articles (or any other dataset).
-  2. Split articles into manageable chunks.
-  3. Embed the chunks using OpenAI's embedding API.
-  4. Query the embedded data to retrieve relevant information.
-
----
-
-## Next Steps
-
-- Explore advanced RAG workflows.
-- Experiment with other datasets and embeddings.
-- Integrate additional LLMs for comparison (e.g., Hugging Face models).
-- Build a simple application (e.g., chatbot or search interface).
-
----
-
-## Contributing
-
-This project is currently a personal hobby project, but contributions and suggestions are welcome!
