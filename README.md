@@ -49,6 +49,7 @@ Notebook: `news_article_summarizer_langchain.ipynb`
   - Used HumanMessage prompt templating from LangChain.
   - Generated bullet-point summaries with proper prompts.
 
+![News-Summarizer](news_summarizer.JPG)
 ---
 
 ### 5. **Llama Index Overview**
@@ -70,6 +71,7 @@ Notebook: `customer_support_qa_chatbot.ipynb`
   - Stored data in a vector storage database using FAISS.
   - Queried the vector datastore and formatted output with `PromptTemplate`.
 
+![Customer Support QA Chatbot](customer_support_qa_chatbot.JPG)
 ---
 
 ### 7. **YouTube Video Summarizer**
@@ -83,6 +85,7 @@ Notebook: `youtube_video_summarizer.ipynb`
   - Prepared prompts and queried the database.
   - Generated summaries using `RetrievalQA`.
 
+![YouTube Video Summarizer](youtube_summarizer.JPG)
 ---
 
 ## How to Use
